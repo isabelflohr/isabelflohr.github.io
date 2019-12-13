@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Isabel Flohr</title>
+        <link rel="stylesheet" type="text/css" href="PortfolioProject.css">
+    </head>
+    <body class="Background">
+<!-- NAV BAR -->
+
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <a href="#Contact">Contact</a>
+    </div>
+
+<!-- END NAV BAR -->
+
+<!-- HOME -->
+
+    <br> <!-- breaks for space between navbar and heading -->
+    <br>
+
+<!-- END HOME -->
+
+<!-- BACKGROUND VIDEO -->
+
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+            <source src="Typing.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. <!-- error mssg displayed if video fails-->
+        </video>
+    </div>
+
+<!-- END BACKGROUND VIDEO -->
+
+<!-- VIDEO TEXT OVERLAY -->
+
+<div class="Video_Text">
+    <h1 style="color:white;">Isabel Flohr's Portfolio</h1>
+        <p>
+                <center>
+                    <br>Welcome to my portfolio website. Here I will showcase my background, skills, and experience.<br>
+                    Thank you for stopping by and enjoy!
+                </center>
+        </p>
+</div>
+
+<!-- END VIDEO TEXT OVERLAY -->
+
+<!-- ABOUT -->
+
+<div class="Row"id="About">
+    <div class="Column_2"> <!-- left column -->
+        <a href="https://learncodinganywhere.com/" target="_blank"><img src="laptop-pic.jpg" alt="laptop pic"></a>
+    </div>
+    
+    <div class="Column_1"> <!-- right column -->
+        <h1>About</h2>
+            <p>My name is Isabel Flohr. I am a student at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Development Boot Camp. I have been trained in my courses so far on how to use Small Basic, HTML, and CSS.<br>
+            As I continue my studies, I'll graduate in late February as a junior-level developer; with experience and understanding in the languages mentioned above, as well as Python, C#, JavaScript, and more.<br>
+            I am always open to receiving information about future oppertunities involving work or making connections within the industry. <a href="#Contact">Contact</a> me below if you are interested.</p>
+    </div>
+</div>
+
+<!-- END ABOUT -->
+
+<!-- GITHUB -->
+
+    <div class="Row" id="GitHub">
+        <div class="Column_1"> <!-- right column -->
+            <h1>GitHub</h1>
+                <p>Below is a link to my GitHub profile where you can see my coding projects:<br>
+                <center><a href="https://github.com/isabelflohr/HTML-and-CSS" target="_blank">Isabel Flohr's GitHub</a></center></p>
+        </div>
+
+        <div class="Column_2"> <!-- left column, picture links to github -->
+            <a href="https://github.com/isabelflohr/HTML-and-CSS" target="_blank"><img src="GitHub.png" alt="GitHub"></a>
+        </div>
+    </div>
+<!-- END GITHUB -->
+
+<!-- CONTACT -->
+
+    <div class="Row" id="Contact">
+        <div class="Column_3"> 
+            <img src="glasses-laptop.jpg" alt="glasses on closed computer"><!-- right column -->
+        </div>
+
+        <div class="Column_1"> <!-- left column -->
+            <h1>Contact</h1>
+                <form action="" method="get"> <!-- this specicfies where to send the form data to and how -->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="submit">
+                </form>
+        </div>
+    </div>
+
+<!-- END CONTACT -->
+
+<!-- FOOTER -->
+
+    <footer>
+        <p>
+            <center><a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+        </p>
+    </footer>
+
+<!-- END FOOTER -->
+
+    </body>
+</html>
