@@ -169,8 +169,8 @@ input[type=submit] {
 
 /* HOVER EFFECT FOR SUBMIT BUTTON */
 input[type=submit]:hover {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     font-weight: bold;
     transform: scale(1.5);
     transition: transform .5s;
