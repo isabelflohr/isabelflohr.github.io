@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Isabel Flohr</title>
+		  <link rel="stylesheet" type="text/css" href="FinalPortfolioCSS">
+		  <script src="FinalPortfolioJS"></script>
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> <!-- We use a little bit of jQuery on this site now -->
+	</head>
+
+<body class="Background"> 
+<!-- FADE IN EFFECT -->
+<script>
+  document.body.className += ' fade-out';
+    $(function() {
+      $('body').removeClass('fade-out');
+    }
+  );
+
+</script>
+
+<!-- NAV BAR -->
+	<div class="Navbar">
+		<a class="active" href="#Home">Home</a> 
+		<a href="#Slideshow">Slideshow</a> <!-- This is a new section -->
+		<a href="#About">About</a>
+		<a href="#GitHub">GitHub</a>
+		<a onclick="openForm()">Contact</a> <!-- This makes it so that our openForm function runs when we click Contact on the nav bar -->
+	</div>
+
+<!-- This allows us to close the form when we click outside the nav bar or contact form -->
+<div class="btn cancel" onclick="closeForm()">
+
+<!-- HOME -->
+	<div id="Home">
+		<br> <!-- Breaks inserted to add space between navbar and first heading -->
+		<br>
+		
+<!-- BACKGROUND VIDEO -->
+		<video autoplay muted loop id="Typing_Video"> <!-- Makes the video play automatically, on a loop and with no sound -->
+			<source src="Typing.mp4" type="video/mp4">
+			Your browser does not support HTML5 video. <!-- Display message if video fails to run -->
+		</video>
+	</div>
+
+<!-- VIDEO TEXT OVERLAY -->
+	<div class="Video_Text"> 
+		<h1 style="color:white;">Isabel Flohr's Portfolio</h1>
+			<p> 
+			  <strong>
+					<center>
+						<br>Welcome to my portfolio website. Here I will showcase my background, skills, and experience.<br>
+                    	Thank you for stopping by and enjoy!
+					</center>	
+			  </strong>				
+			</p> 
+	</div>
+
+<!-- SLIDESHOW SECTION -->
+  <div id="Slideshow">
+    <div id="Slideshow_Background"> 
+      <div id="Slideshow_Container">
+        
+		<div class="mySlides fade">
+          <div class="Slide_Number">1 / 3</div>
+            <img class="Slide_Show_Images" src="Picture_of_You.jpg" style="width:100%">
+              <div class="text">I'm available to assist you on your project!</div>
+        </div>
+        
+		<div class="mySlides fade">
+          <div class="Slide_Number">2 / 3</div>
+            <img class="Slide_Show_Images" src="HTML_CSS_and_JavaScript.jpeg" style="width:100%">
+              <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+        </div>
+
+		<div class="mySlides fade">
+		  <div class="Slide_Number">3 / 3</div>
+			<img class="Slide_Show_Images" src="contactSlidePic.jpg" style="width:100%">
+			  <div class="text"> 
+				<a onclick="openForm()" href="#Contact" style="color:white;">Contact me now!</a>
+			  </div>
+	    </div>
+	
+		  <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+		
+	  </div>
+  <br>
+
+      <div style="text-align:center">
+ 
+		<span class="dot" onclick="currentSlide(1)"></span> 
+		<span class="dot" onclick="currentSlide(2)"></span> 
+		<span class="dot" onclick="currentSlide(3)"></span>
+
+      </div>
+    </div>
+  </div>
+
+<!-- JS function within this file to ensure it was given precedence, this function covers the slideshow -->
+  <script>
+    var slideIndex = 1;
+	  showSlides(slideIndex);
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		  slides[i].style.display = "none";  
+		  }
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+  </script>
+
+<!-- ABOUT -->
+  <div class="Row" id="About"> 
+	<div class="Column_2"> <!-- Left column -->
+		<a href="https://learncodinganywhere.com/" target="_blank"><img src="laptop-pic.jpg" alt="laptop pic"></a>
+	</div>
+  
+	<div class="Column_1"> <!-- Right column -->
+	  <h1 style="font-size: 5vw;">About</h2>
+	    <p style="font-size:2vw;">My name is Isabel Flohr. I am a student at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Development Boot Camp. I have been trained in my courses so far on how to use Small Basic, HTML, JavaScript, and CSS.<br>
+            As I continue my studies, my experience and understanding of the languages mentioned above will become deeper. I will also learn Python, C#, and more as I continually expand on my previous knowledge.<br>
+            I am always open to receiving information about future oppertunities involving work, or making connections within the industry.</p><a href="#Contact">Contact</a> me below if you are interested in working together!</p>
+	</div>
+  </div>
+
+<!-- GITHUB -->
+	<div class="Row" id="GitHub">
+		<div class="Column_1"> <!-- Left column -->
+			<h1 style="font-size:5vw;">GitHub</h1>
+				<p style="font-size:2vw;">Below is a link to my GitHub profile where you can see my coding projects:<br>
+				<center><a href="https://github.com/isabelflohr/HTML-and-CSS" target="_blank">Isabel Flohr's GitHub</a></center></p>
+		</div>
+		
+		<div class="Column_2"> <!-- Right column -->
+			<a href="https://github.com/isabelflohr/HTML-and-CSS" target="_blank"><img src="GitHub.png" alt="GitHub"></a>
+		</div>
+	</div>
+</div>
+
+<!-- CONTACT -->
+  <div id="Contact"> 
+    <button onclick="openForm()" class="Pop_Up_Button"> CONTACT </button>
+	  <div class="form-popup" id="myForm">
+	    <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
+		<h1 style="font-size:5vw;">Contact</h1>
+			<label for="name"><b>Name</b></label>
+			  <input type="text" placeholder="Type your name here" name="name" required>
+			<label for="phone"><b>Phone</b></label>
+			  <input type="text" placeholder="Enter your phone number here" name="phone">
+			<label for="email"><b>Email</b></label>		
+			  <input type="text" placeholder="Type your email address here" name="email" required>
+			<label for="message"><b>Message</b></label>
+			  <input type="text" placeholder="Type your message here" name="message">
+ 
+    <button type="submit" class="btn">SUBMIT</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+	    </form>
+	  </div>
+  </div>
+	
+<!-- FOOTER -->
+	<footer>
+	  <p>
+	    <center><a href="https://learncodinganywhere.com/">The Tech Academy</a></center><br>
+      </p>
+	</footer>
+
+</body>
+</html>
