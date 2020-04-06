@@ -30,7 +30,7 @@ body.fade-out {
 	z-index: 1; /* Ensures other elements don't display over the navbar */
     position: fixed;
 	-webkit-animation: moveNav 5s; /* Safari 4.0 - 8.0 */
-    animation: moveNav 5s;
+    animation: moveNav 3s;
 }
 
 /* NAVBAR TEXT */
@@ -45,7 +45,7 @@ body.fade-out {
 	text-align: center; 
     position: relative;
 	-webkit-animation: movenavText 5.75s; /* Safari 4.0 - 8.0 */
-    animation: movenavText 5.75s;
+    animation: movenavText 4s;
 	letter-spacing: .2vw;
 }
 
@@ -155,7 +155,6 @@ animation: zoominoutsinglefeatured 5s;
   width: auto;
 }
 
-
 /* NEXT / PREVIOUS BUTTONS */
 .Previous, .Next {
   cursor: pointer;
@@ -246,7 +245,7 @@ animation: zoominoutsinglefeatured 5s;
 	float: left;  
 	width: 50%; /* This ensures one column takes up half the page width */
   padding: 10px; 
-  padding-top: 3%;
+  padding-top: 1.9%;
 	background-color: #f2f2f2; 
 	height: 500px; /* Adjust this to fit content as needed */
 }
@@ -257,7 +256,7 @@ animation: zoominoutsinglefeatured 5s;
   padding: 10px;
   padding-top: 1.9%;
 	height: 500px; /* You may need to adjust this to fit your content */
-	background-color: #4d4d4d;
+	background-color: dimgray;
 }
 
 .Row:after { /* This inserts something after the content of selected elements */
@@ -308,20 +307,14 @@ img {
     max-width: 100%; 
 	height: 100%;
     margin: auto auto auto auto;
-	display: block;	/* By specifying block display we can ensure our images are able to be centered */
-}
-
-/* HEADING 1 ELEMENT HOVER EFFECT */
-h1:hover {
-	color: black;
-	font-weight: normal; /* Makes the text no longer bold when hovered over */ 
+  display: block;	/* By specifying block display we can ensure our images are able to be centered */
 }
 
 /* IMAGE ELEMENT HOVER EFFECT */
 img:hover {
 	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
     transition: transform 1s;
-	transform: scale(1.1);
+	transform: scale(1.03);
 }
 
 /* CONTACT FORM */
@@ -404,7 +397,7 @@ button {
 /* Hover effect for buttons */
 button:hover, .form-container .btn:hover{
   color: white;
-  background-color: black;
+  background-color: dimgray;
   -webkit-transition-duration: 1s; 
   transition-duration: 1s;
   border-style: solid;
@@ -423,5 +416,5 @@ button:hover, .form-container .btn:hover{
 /* FOOTER ELEMENT */
 footer {
 	padding: 2%;
-	background-color:white;
+	background-color:#f2f2f2;
 }
